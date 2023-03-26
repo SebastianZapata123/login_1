@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #020410;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 12.5%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 16px;
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffff;
+    border-radius: 5px; 
+    bottom: -4px;
+    transform: translateY(9px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.navbar a:hover::after{
+    transform: translateY(0);
+    opacity: 1;
+    
+}
+
+.search-bar {
+    width: 250px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #ffff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input{
+    width: 100%;
+    background: transparent;
+    border:  none;
+    outline: none;
+    font-size: 16px;
+    color: #ffff;
+    padding-left: 20px;
+}
+
+.search-bar input::placeholder{
+    color: #ffff;
+}
+
+.search-bar button{
+    width: 40px;
+    height: 100% ;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    color: #ffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.background{
+    width: 100%;
+    height: 100vh;
+    background: url(fondo_3.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 550px;
+    background: url('fondo_3.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.container .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58%;
+    height: 100%;
+    background:transparent;
+    padding: 80px;
+    color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.content .logo{
+    font-size: 30px;
+}
+
+.content .texto h2{ 
+    font-size: 40px;
+    line-height: 1;
+}
+
+.content .texto span{
+    font-size: 20px;
+}
+
+.content .texto p{
+    font-size: 16px;
+    margin:  20px 0;
+}
+
+.container .loger-box{
+    width: calc(100% - 58%);;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.texto .social a i{
+    font-size: 30px;    
+    color: #ffff;
+    margin-right: 10px;
+    transition: 0.5s ease;
+}
+.texto .social a:hover i{
+    transform: scale(1.3);
+}
+
+.loger-box .formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: #ffff;
+}
+
+.formulario h2{
+    font-size: 32px;
+    text-align: center;
+}
+
+.formulario .input-box{
+    position: relative;
+    width: 340px;
+    height: 50px;
+    border-bottom: 2px solid #ffff;
+    margin: 30px 0px;
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #ffff;
+    font-weight: 500;
+    padding-right: 28px;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.input-box input:focus~label, 
+.input-box input:valid~label{
+    position: absolute;
+    top: -5px; 
+    }
+
+.input-box .icon{
+    position: absolute;
+    right: 0;
+    top: 13px;
+    font-size: 19px;
+
+}
+
+.remember-forgot{
+    font-size: 14px;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.remember-forgot label input{
+    accent-color: #ffff ;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: #ffff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #4460ff;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffff;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+
+}
+
+.formulario .login-register{
+    font-size: 14.5px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.formulario .login-register a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    
+}
+
+.login-register a:hover{
+    text-decoration: underline;
+}
